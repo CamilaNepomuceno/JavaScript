@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title> arrays5 </title>
+</head>
+<body>
+<h2>Testing array</h2>
+<p id="result"></p>
+	
+
+<script>	
+
+function forloop(){
+console.log("function test!");
+	
+var old = [ "Camila", "John", "Carol", "Paul", "Ana", "Kate", "Charlie", "Josh", "Judy", "Harry"];
+var arrayLength = old.length;
+	for (var i = 0; i < arrayLength; i++) {
+    console.log(" current array of friends : " + old);
+	document.getElementById("result").innerHTML = " " + old;
+		
+		
+	}
+
+}
+	
+	
+forloop();
+</script>
+
+
+
+</body>
+</html>

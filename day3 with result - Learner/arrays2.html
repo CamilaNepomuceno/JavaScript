@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title> arrays1 </title>
+</head>
+<body>
+<h2>Add one friend</h2>
+<input id="input1" type=”number”/> 
+
+<input type="button" value="Collect data" onclick="container(input1.value)"/>
+<p id="arraydisplay"></p>
+
+	
+
+<script>	
+
+function container (){
+console.log("function test!");
+	
+var old = [ "Camila", "John", "Ana"];
+var length = old.push(document.getElementById("input1").value);
+	
+
+	
+document.write("new array is : " + old + " The number of elements is: " + old.length); 
+
+	
+		
+console.log(old);	
+	
+	
+}
+</script>
+
+
+
+</body>
+</html>

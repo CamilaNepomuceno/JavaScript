@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title> arrays1 </title>
+</head>
+<body>
+<h2>Add three values</h2>
+<input id="input1" type=”number”/> 
+<input id="input2" type=”number”/> 
+<input id="input3" type=”number”/>
+
+<input type="button" value="Collect data" onclick="container(input1.value, input2.value, input3.value)"/>
+<p id="arraydisplay"></p>
+
+	
+
+<script>	
+
+function container (){
+console.log("function test!");
+var collect = new Array((document.getElementById("input1").value), (document.getElementById("input2").value),	(document.getElementById("input3").value) );
+	
+document.getElementById("arraydisplay").innerHTML = collect;
+	
+console.log(collect);	
+	
+}
+</script>
+
+
+
+</body>
+</html>

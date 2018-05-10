@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>Javascript pop element from array</title>
+
+</head>
+<body>
+<h1>Javascript labs</h1>
+<h2>Lab 22 - Pop element from array</h2>
+<input id="lab22input" />
+<!--  add element to end of array -->
+<input type="button" value="Push member to array" id="lab22push" />
+<!--  remove last element of the array -->
+<input type="button" value="Pop member from array" id="lastpop" />
+<!--  remove the first element of the array -->
+<input type="button" value="Shift member from array" id="firstshift" />
+<!--  add to the first element of the array -->
+<input type="button" value="Unshift member from array" id="firstunshift" />
+
+<p id="lab22result"></p>
+<p id="lab22result"></p>
+	
+<script>
+	
+document.getElementById("lab22push").addEventListener('click',pushArray);
+document.getElementById("lastpop").addEventListener('click',popArray);
+document.getElementById("firstshift").addEventListener('click',shiftArray);
+document.getElementById("firstunshift").addEventListener('click',unshiftArray);
+	
+var myArray = [];
+	
+	function display(){
+		document.getElementById("lab22result").innerHTML = myArray;
+	}
+
+	function pushArray(){
+		
+	var userInput1 =
+	document.getElementById("lab22input").value;
+		
+		myArray.push(userInput1);
+		
+		display();	
+	}
+	
+	function popArray() {
+		myArray.pop();
+		
+	display();
+	}
+	
+	function shiftArray (){
+		myArray.shift();
+		
+	display();
+	}
+	
+	function unshiftArray (){
+		var userInput1 =
+	document.getElementById("lab22input").value;
+		myArray.unshift(userInput1);
+		
+	display();
+	}
+
+
+</script>
+
+</body>
+</html>

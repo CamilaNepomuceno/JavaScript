@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>Add to an array with specified index</title>
+
+</head>
+<body>
+<h1>Javascript</h1>
+<h2>add a new member</h2>
+<button type="button" onclick="addNewMember()" >New Member</button>
+<p id="myarray"></p>
+<br>
+<p id="myarray2"></p>
+	
+<script>
+function addNewMember () {	
+var members = ["Camila", "John", "Carol", "Paul", "Ana", "Kate", "Charlie", "Josh", "Judy", "Harry"];
+document.getElementById("myarray").innerHTML = members;
+	
+insertAtIndex = 2,
+stringToBeInserted = 'Lucy';
+members.splice( insertAtIndex, 0, stringToBeInserted );
+
+document.getElementById("myarray2").innerHTML = " We have a new member: " + members;
+console.log(members);
+}
+	
+</script>
+
+
+</body>
+</html>

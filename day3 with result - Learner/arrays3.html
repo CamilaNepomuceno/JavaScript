@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title> arrays3 </title>
+</head>
+<body>
+<h2>Testing array</h2>
+
+	
+
+<script>	
+
+function container (){
+console.log("function test!");
+	
+var old = [ "Camila", "John", "Carol", "Paul"];
+document.write(" The old array is : " + old );
+	
+//shift removes the first element	
+var old1 = old.shift();
+document.write(" Removed element is : " + old1 ); 
+document.write(" new array is : " + old );
+
+
+//unshift add a nem element on the first position	
+var length = old.unshift("July");
+document.write(" Number of elements of the array is : " + length );
+document.write(" the second new array is : " + old );
+
+//push appends the given element(s) in the last of the array	
+var length2 = old.push("Kate");	
+document.write(" 3 new array is : " + old);
+
+
+//pop removes the last element from an array and returns that element	
+var element = old.pop();
+document.write(" element is : " + element ); 
+document.write(" 4 new array is : " + old );
+	
+}
+	
+container();
+</script>
+
+
+
+</body>
+</html>
