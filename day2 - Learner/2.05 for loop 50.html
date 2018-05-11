@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>Javascript loop from 1 to 50</title>
+</head>
+<body>
+<h1>Javascript</h1>
+<h2>For Loop from 1 to 50</h2>
+<input type="button" value="Display 1 to 50" onclick="forloop()"/>
+	
+<p id="result"></p>
+	
+
+<script>
+	
+	
+	function forloop() {
+	
+	var DisplayNumbers;
+	
+	console.log("beginning of the loop");
+	
+	for (DisplayNumbers=1; DisplayNumbers < 51; DisplayNumbers++)	{
+		
+		console.log("current number of cars " + DisplayNumbers);
+		document.getElementById("result").innerHTML += " " + DisplayNumbers;
+		
+	}
+
+	console.log ("Loop has stopped");
+	
+	
+	}
+
+
+</script>	
+</body>
+</html>
+
+
+

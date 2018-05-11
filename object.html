@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en" >
+<head>
+<meta charset="utf-8" />
+<title>Object</title>
+
+</head>
+<body>
+<script>
+	
+// Ways of declaring object
+	
+// an object is a collection of properties with objects you have a name and an assigned value
+	
+//var student = new Object();
+
+//student["firstName"] = "Barry";
+//student["surname"] = "Smith";
+	
+//creating a var to hold the firstname
+	
+//var firstNameProperty = "firstName";
+	
+//console.log(student);
+//console.log(student[firstNameProperty]);
+
+// ========= The better practice of declaring objects ================================== //
+	
+var student = {
+	
+	firstName: "Garry",
+	secondName: "Trotter",
+		
+	address: { // Nested Object
+	
+	street: "150 Minories",
+	city: "London",
+	postcode: "EC1 5T2"
+}
+};
+	
+console.log(student.firstName);
+console.log(student.secondName);
+	
+// Return our object to the console
+	
+console.log(student);
+// create a function that returns the name of the student	
+//function greeting() {
+	
+//	console.log("Good Morning : " + student.firstName);
+//}
+	
+// greeting();	
+
+// The parameter will be looking for an object (can be called "studentname" or wherever you want)
+function greeting(studentname) {
+	
+	console.log("Good Morning : " + studentname.firstName + studentname.secondName);
+}
+
+	
+greeting(student);	
+console.log(student);
+	
+// adding information to our object	
+
+greeting({firstName: "Lucy", secondName: " Sam"}); // parse our own object
+greeting({firstName: "Bruna", secondName: " Sam"});
+
+var person = { // declaring an object
+	
+	firstName : "John",
+	surname : "tom",
+	
+	addres: {
+		
+	street: "100 Minories",
+	city: "New York",
+	zipCode: "0525"
+		
+	} // javascript will treat everything within {} as one line
+	
+};
+
+person.addres2 = {
+	
+	street: "Pentonvile",
+	city: "London",
+	zipCode: "n19jl"
+	
+}
+	
+console.log(person);	
+
+console.log(person.addres.street);	
+
+
+function theEnd() {
+	
+	console.log("Bye");
+	
+}
+	
+theEnd.language = "English";
+console.log(theEnd.language);
+	
+var shoeCollection = {
+	
+	brand: "Nike",
+	model: "Air Force Ones",
+	price: "95",
+	created: 100,
+	sold: 36,
+	
+	availability: function(){
+		
+		return shoeCollection.created - shoeCollection.sold;
+	} 
+	
+}
+	
+console.log(shoeCollection.availability());
+	
+	
+	
+	
+	
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+
+
+<script>
+	
+function Pet(first, age, breed) {
+    this.firstName = first;
+    this.age = age;
+	this.breed = breed;
+}
+var dog = new Pet("Jasper", "5", "Chow Chow");
+var cat = new Pet("Jack Sparrow ", "8", "Cat cat");
+
+
+	
+document.getElementById("demo").innerHTML = "My dog is " + dog.firstName + " he is " + dog.age + " his is a lovely " + dog.breed;
+
+document.getElementById("demo2").innerHTML = "My cat is " + cat.firstName + " he is " + cat.age + " his is a lovely " + cat.breed;
+
+</script>
+
+</body>
+</html>
+

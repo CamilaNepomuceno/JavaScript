@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+
+
+<script>
+
+
+var bagsCollection = {
+	
+	Brand: "Kate Spade",
+	price: "78",
+	
+	model: {
+	
+	Name: "Cameron Street Leila",
+	Size: "Small",
+	Color: "Black"
+	}
+	
+};
+	
+bagsCollection.model2 = { 
+	Name: "Kingston Drive Arla",
+	Size: "Medium",
+	Color: "White"
+}
+
+console.log(bagsCollection.model2);
+document.getElementById("demo").innerHTML = bagsCollection.model.Name;
+document.getElementById("demo").innerHTML = bagsCollection.model2.Name;		
+
+
+	
+</script>
+
+</body>
+</html>

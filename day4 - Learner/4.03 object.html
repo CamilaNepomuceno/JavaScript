@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Object</p>
+<p id="demo"></p>
+
+<script>
+	
+var bagsColletion = {
+	
+	brand: "Kate Spade",
+	model: "Cameron Street Leila",
+	price: "78",
+	created: 1000,
+	sold: 835,
+	
+	availability: function(){
+		
+		return bagsColletion.created - bagsColletion.sold;
+	} 
+	
+}
+
+console.log(bagsColletion.availability());
+
+</script>
+</body>
+</html>
+

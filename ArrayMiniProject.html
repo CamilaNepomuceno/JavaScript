@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>Array Mini Project</title>
+
+</head>
+<body>
+	<h1>Enter and Return a random element</h1>
+<input id="ElementEntered" />
+<input type="button" value="Enter a member into the array" id="EnterE" />
+<br>
+<input id="ElementReturned" />
+<input type="button" value="Return a member from the array" id="ReturnedE" />
+<p id="ElementResult"></p>
+<p id="RandomResult"></p>
+	
+<script>
+	
+document.getElementById("EnterE").addEventListener('click',pushArray);
+document.getElementById("ReturnedE").addEventListener('click',getRandom);
+
+var myArray = [];
+	
+	function pushArray(){
+		
+	var userInput1 = document.getElementById("ElementEntered").value;
+		
+		myArray.push(userInput1);
+		
+		document.getElementById("ElementResult").innerHTML = myArray;
+	}
+	
+	function getRandom(){
+		
+	var userInput2 = document.getElementById("ElementReturned").value;
+			
+		document.getElementById("RandomResult").innerHTML = myArray[userInput2];
+	}
+	
+
+
+</script>
+
+</body>
+</html>

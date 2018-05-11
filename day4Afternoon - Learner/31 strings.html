@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>Javascript display text as uppercase and lowercase</title>
+	<h1>Javascript labs</h1>
+	<h2>Lab 31 - Display text as uppercase and lowercase</h2>
+	<input id="lab31input1"/>
+	<input type="button" value="Convert to Uppercase/Lowercase" id="lab31"/><br />
+	<input id="result1" />
+	<input id="result2" />
+	
+	
+	<script>
+	document.getElementById("lab31").addEventListener('click',getMessage());
+	function getMessage () {	
+		
+	var message = document.getElementById("lab31input1").value;
+	
+	var Upper = message.toUpperCase();	
+	console.log(message.toUpperCase());
+	var Lower = message.toLowerCase();
+	
+	document.getElementById("result1").innerHTML = Upper;
+	document.getElementById("result2").innerHTML = Lower;
+			
+	}
+		
+	
+	</script>
+</head>
+<body>
+	
+
+
+	
+</body>
+</html>
