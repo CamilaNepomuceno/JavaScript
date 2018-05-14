@@ -4,32 +4,160 @@
 <title>Testing your knowledge</title>
 
 <h2>Testing your knowledge in Geography</h2>
-<input type="button" value="What is the capital of China?" id="EnterOne" />	
-<br><br>	
 <p id="demo"></p>
-<p id="demo2"></p>
-
+<div id="Quiz"> </div>   
+<button onclick="result()">Submit</button>
+<div id="output1"></div>
+    
+    
 <script>
-	
-function Question(first) {
-	
-var Question1 = new Question("What is the capital of China");
-var Question2 = new Question("What is the capital of Australia?");
-var Question3 = new Question("What is the capital of Brasil?");	
-	
-}
+    
+ var perguntas = [];
+perguntas.push(
+    {
+        text: "What is the capital of China?",
+        answers: [
+            {
+                text: "Hong Kong",
+                value: 0
+            },
+            {
+                text: "Beijing",
+                value: 1
+            },
+            {
+                text: "Shangai",
+                value: 0
+            }
+        ]
+    }
+);
+perguntas.push(
+    {
+        text: "What is the capital of Australia?",
+        answers: [
+            {
+                text: "Canberra",
+                value: 1
+            },
+            {
+                text: "Sydney",
+                value: 0
+            },
+            {
+                text: "Brisbane",
+                value: 0
+            },
+        ]
 
-function Answers(first, second, third) {
-    this.A = first;
-    this.B = second;
-	this.C = third;
-}
-	
-var Answer1 = new Answers("Hong Kong", "Beijing", "Shangai");
-var Answer2 = new Answers("Canberra", "Sydney", "Brisbane");
-var Answer3 = new Answers("Sao Paulo", "Rio de Janeiro", "Brasilia");	
+    }
+);
+perguntas.push(
+    {
+        text: "What is the capital of Brasil?",
+        answers: [
+            {
+                text: "São Paulo",
+                value: 0
+            },
+            {
+                text: "Rio de Janeiro",
+                value: 0
+            },
+            {
+                text: "Brasília",
+                value: 1
+            },
+        ]
 
-	
+    }
+);
+perguntas.push(
+    {
+        text: "What is the capital of Mexico?",
+        answers: [
+            {
+                text: "Cancun",
+                value: 0
+            },
+            {
+                text: "Mexico City",
+                value: 1
+            },
+            {
+                text: "Oaxaca",
+                value: 0
+            },
+        ]    }
+);
+
+    
+function BuildQuiz (){
+ var Quiz = document.getElementById("Quiz");
+ 
+ //foreach question text
+ for(var i = 0; i< perguntas.length; i++){
+     //Create question text 
+     var questionText = document.createElement("p");
+     questionText.innerHTML = perguntas[i].text ;
+     
+     //Create question section
+     var questionSection = document.createElement("section");
+     
+     //Add question text to section
+     questionSection.appendChild(questionText);
+          
+  
+     //foreach question answer
+  for(var j = 0; j< perguntas[i].answers.length; j++){
+      
+      var answerText = document.createElement("input");
+      answerText.id = perguntas[i].answers[j].text;
+      answerText.type = "radio";
+      answerText.value = perguntas[i].answers[j].value;
+      answerText.name = "Question" + i;
+      
+      
+      var answerText2 = document.createElement("label");
+      answerText2.for = answerText.id;
+      answerText2.innerHTML = perguntas[i].answers[j].text;
+  
+        //Create question answer
+      var answersSection = document.createElement("section");
+        //Add question answer to section
+      answersSection.appendChild(answerText);
+      answersSection.appendChild(answerText2);
+      questionSection.appendChild(answersSection);
+          
+ }
+     Quiz.appendChild(questionSection);
+ }
+}
+    
+
+function result () {
+    var score = 0;
+    
+    for(var i = 0; i< perguntas.length; i++){ 
+    for(var j = 0; j< perguntas[i].answers.length; j++){
+    var qanswers = document.getElementById(perguntas[i].answers[j].text);
+    
+    
+    
+        
+    if(qanswers.checked === true){
+        score = score + parseInt(qanswers.value);
+    }
+    }
+    }
+   
+    document.getElementById("output1").innerHTML = ("Your score is " + score);
+}
+    
+  
+    
+BuildQuiz ();
+    
 </script>
 
 </body>
